@@ -1,15 +1,28 @@
-<section class="login">
+<section class="login-wrapper">
   <h1>Exam<strong>Machine</strong></h1>
   <h2>Your new favorite web app</h2>
-  <hr />
-  
-  <label for="user">Username</label>
-  <input #loginUser (keyup.enter)="checkUser(loginUser.value, loginPass.value)" type="text" name="user" />
 
-  <label for="pass">Password</label>
-  <input #loginPass (keyup.enter)="checkUser(loginUser.value, loginPass.value)" type="password" name="pass" />
+  <input class="email" #loginUser (keyup.enter)="verifyUser(loginUser.value, loginPass.value)" placeholder="E-mail" type="email" />
 
-  <button (click)="checkUser(loginUser.value, loginPass.value)">Log In</button>
-  <hr />
+  <input class="password" #loginPass (keyup.enter)="verifyUser(loginUser.value, loginPass.value)" placeholder="Password" type="password" />
+
+  <button type="submit" class="btn btn-primary" (click)="verifyUser(loginUser.value, loginPass.value)">Log In</button>
+
   <p>New to ExamMachine? <a [routerLink]="['/signup']">Sign up!</a></p>
+</section>
+
+<section class="alert-container" [ngStyle]="{'height': height}">
+  <div [ngClass]="{'alert-danger': dangerAlert, 'alert-success': successAlert}" class="alert">
+    <div class="alert-item">
+      <span class="alert-text">
+        {{message}}
+      </span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <footer>
+    2017 © Green Fox Academy
+  </footer>
 </section>

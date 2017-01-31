@@ -1,111 +1,55 @@
-.login {
+section {
   margin: 0 auto;
-  margin-top: 3em;
-  padding: 3em 1em 3em 1em;
-  width: 25em;
-  color: white;
+  margin-top: 50px;
+  width: 250px;
+  font-size: 11px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgba(255, 255, 255, .4);
 }
 
-strong {
-  font-weight: bold;
-}
-
-.login h1 {
-  padding: 0;
-  margin: 0 0 0.3em 3em;
-  font-size: 1.5em;
+h1 {
   font-weight: normal;
+  line-height: normal;
   text-align: left;
   width: 100%;
+  margin: 0 0 30px 0;
+  padding: 0;
+  color: #29AAA0;
 }
 
-.login h2 {
-  padding: 0;
-  margin: 0 0 1em 4em;
-  font-size: 1.1em;
+h2 {
+  font-size: 12px;
+  line-height: normal;
   font-weight: normal;
   text-align: left;
   width: 100%;
   opacity: .7;
-}
-
-.login label {
-  margin: 1em 0 1em 0;
-  opacity: .7;
-}
-
-.login sup {
-  opacity: .7;
-}
-
-.login sup:hover {
-  cursor: pointer;
-}
-
-.login input, .login textarea {
-  width: 15em;
-  padding: 5px;
-  border: 0;
-  opacity: .5;
-}
-
-.login textarea {
-  max-width: 15em;
-  max-height: 20em;
-}
-
-.login input:focus, .login textarea:focus {
-  border: .1em orange;
-  opacity: 1;
-}
-
-.login input:active, .login textarea:active {
-  opacity: 1;
-}
-
-.login hr {
+  color: white;
   padding: 0;
-  margin: 0 0 1em 0;
-  width: 80%;
-  opacity: .3;
+  margin: 0 0 5px 0;
 }
 
-.login button {
-  margin: 1em 0 1em 0;
-  border: 0;
-  color: teal;
-  font-size: 1em;
-  font-weight: bold;
-  padding: 5px;
-  width: 5em;
-  background-color: rgba(255, 255, 255, .5);
-  transition: .3s ease;
-  -webkit-transition: .3s ease;
-  -moz-transition: .3s ease;
-}
-
-.login button:hover {
+input {
   color: white;
-  background-color: orange;
-  cursor: pointer;
+  width: 100%;
+  margin: 5px 0 10px 0;
+}
+
+button {
+  margin: 30px;
+  width: 120px;
+}
+
+.hide {
+  opacity: 0;
   transition: .3s ease;
   -webkit-transition: .3s ease;
   -moz-transition: .3s ease;
 }
 
-.login a {
-  color: white;
-  transition: .3s ease;
-  -webkit-transition: .3s ease;
-  -moz-transition: .3s ease;
-}
-
-.login a:hover {
-  color:teal;
+.show {
+  opacity: 1;
   transition: .3s ease;
   -webkit-transition: .3s ease;
   -moz-transition: .3s ease;

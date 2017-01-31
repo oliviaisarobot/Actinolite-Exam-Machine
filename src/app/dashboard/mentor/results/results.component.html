@@ -1,0 +1,22 @@
+<section>
+  <h1>Results</h1>
+  <clr-datagrid>
+      <clr-dg-column [clrDgField]="'name'">Name</clr-dg-column>
+      <clr-dg-column [clrDgField]="'exam'">Exam</clr-dg-column>
+      <clr-dg-column [clrDgField]="'class'">Class</clr-dg-column>
+      <clr-dg-column [clrDgField]="'cohort'">Cohort</clr-dg-column>
+      <clr-dg-column>Results</clr-dg-column>
+      <clr-dg-column>Actions</clr-dg-column>
+
+      <clr-dg-row *clrDgItems="let user of users">
+          <clr-dg-cell>{{user.name}}</clr-dg-cell>
+          <clr-dg-cell>{{user.exam}}</clr-dg-cell>
+          <clr-dg-cell>{{user.class}}</clr-dg-cell>
+          <clr-dg-cell>{{user.cohort}}</clr-dg-cell>
+          <clr-dg-cell>{{user.result}}</clr-dg-cell>
+          <clr-dg-cell><button class="btn btn-link modify">Edit</button></clr-dg-cell>
+      </clr-dg-row>
+
+      <clr-dg-footer>{{users.length}} uesers</clr-dg-footer>
+  </clr-datagrid>
+</section>

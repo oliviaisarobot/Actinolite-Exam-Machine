@@ -1,0 +1,16 @@
+<h1>Unassigned students</h1>
+<h2>Recently registered students, who are not assigned to any class yet. Let's fix that!</h2>
+
+<clr-datagrid>
+    <clr-dg-column [clrDgField]="'name'">Student name</clr-dg-column>
+    <clr-dg-column>Actions</clr-dg-column>
+
+    <clr-dg-row *clrDgItems="let user of unassigned">
+        <clr-dg-cell>{{user.name}}</clr-dg-cell>
+        <clr-dg-cell class="centered">
+          <button class="btn btn-sm btn-link" (click)="changeClass()">Set class</button>
+        </clr-dg-cell>
+    </clr-dg-row>
+
+    <clr-dg-footer>{{unassigned.length}} students</clr-dg-footer>
+</clr-datagrid>

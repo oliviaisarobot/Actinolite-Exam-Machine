@@ -1,0 +1,13 @@
+<section>
+  <nav class="sidenav">
+    <h1>Hi, <strong>{{name}}</strong>!</h1>
+    <a (click)="navigate('/cohorts')" class="nav-link">Cohorts</a>
+    <a (click)="navigate('/classes')" class="nav-link">Classes</a>
+    <a (click)="navigate('/students')" class="nav-link">Students</a>
+    <a (click)="navigate('/exams')" class="nav-link">Exams</a>
+    <a (click)="navigate('/results')" class="nav-link">Results</a>
+  </nav>
+  <article>
+    <router-outlet></router-outlet>
+  </article>
+</section>

@@ -1,0 +1,24 @@
+<section>
+  <h1>Cohorts</h1>
+  <clr-datagrid>
+      <clr-dg-column [clrDgField]="'name'">Cohort name</clr-dg-column>
+      <clr-dg-column>Actions</clr-dg-column>
+
+      <clr-dg-row *clrDgItems="let cohort of cohorts">
+          <clr-dg-cell>{{cohort.name}}</clr-dg-cell>
+          <clr-dg-cell><button class="btn btn-link modify">Edit</button><button class="btn btn-link modify">Delete</button></clr-dg-cell>
+      </clr-dg-row>
+
+      <clr-dg-footer>{{cohorts.length}} cohorts</clr-dg-footer>
+  </clr-datagrid>
+  <button class="btn btn-primary add" (click)="opened = true">Add new Cohort</button>
+      <clr-modal [(clrModalOpen)]="opened">
+      <div class="modal-body">
+          <input type="text" placeholder ="Cohort name"/>
+      </div>
+      <div class="modal-footer">
+          <button type="button" class="btn btn-outline" (click)="opened = false">Cancel</button>
+          <button type="button" class="btn btn-primary" (click)="opened = false">Add</button>
+      </div>
+  </clr-modal>
+</section>

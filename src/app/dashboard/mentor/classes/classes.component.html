@@ -1,0 +1,42 @@
+<section>
+  <div class="container">
+    <h1>Classes</h1>
+    <clr-dropdown [clrMenuPosition]="'bottom-right'">
+    <button class="btn btn-outline-primary" clrDropdownToggle>
+        Cohorts
+        <clr-icon shape="caret down"></clr-icon>
+    </button>
+    <div class="dropdown-menu">
+      <p *ngFor="let cohort of cohorts" clrDropdownItem>{{cohort.name}}</p>
+    </div>
+  </clr-dropdown>
+  </div>
+  <clr-datagrid>
+      <clr-dg-column>Class name</clr-dg-column>
+      <clr-dg-column>Cohort name</clr-dg-column>
+      <clr-dg-column>Actions</clr-dg-column>
+
+      <clr-dg-row *ngFor="let class of classes">
+          <clr-dg-cell>{{class.name}}</clr-dg-cell>
+          <clr-dg-cell>{{class.cohort}}</clr-dg-cell>
+          <clr-dg-cell><button class="btn btn-link modify">Edit</button><button class="btn btn-link modify">Delete</button></clr-dg-cell>
+      </clr-dg-row>
+
+      <clr-dg-footer>{{classes.length}} classes</clr-dg-footer>
+  </clr-datagrid>
+  <button class="btn btn-primary add" (click)="opened = true">Add new class</button>
+      <clr-modal [(clrModalOpen)]="opened">
+      <div class="modal-body">
+          <input type="text" placeholder ="Class name"/>
+          <div class="select">
+                <select id="exampleSelect1">
+                    <option *ngFor="let cohort of cohorts">{{cohort.name}}</option>
+                </select>
+            </div>
+      </div>
+      <div class="modal-footer">
+          <button type="button" class="btn btn-outline" (click)="opened = false">Cancel</button>
+          <button type="button" class="btn btn-primary" (click)="opened = false">Add</button>
+      </div>
+  </clr-modal>
+</section>

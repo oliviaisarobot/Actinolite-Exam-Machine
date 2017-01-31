@@ -1,25 +1,26 @@
-<section class="login">
-  <h1>Sign up for Exam<strong>Machine</strong></h1>
-  <hr />
-  <p>
-    <label for="user">Pick a username</label>
-    <sup>?</sup>
-  </p>
-  <input class="username" type="text" name="user" />
-  <p>
-    <label for="pass">Pick a password</label>
-    <sup>?</sup>
-  </p>
-  <input type="password" name="pass" />
-  <p>
-    <label for="pass-again">Retype password</label>
-    <sup>?</sup>
-  </p>
-  <input type="password" name="pass-again" />
-  <p>
-    <label for="hint">Hint:</label>
-    <sup>?</sup>
-  </p>
-  <textarea name="hint"></textarea>
-  <button [routerLink]="['../']">Sign up</button>
+<section class="signup">
+  <h2>Sign up for</h2>
+  <h1>Exam<strong>Machine</strong></h1>
+
+  <input class="name" #newName (keyup.enter)="sendUserData(newName.value, newEmail.value, newPass.value)" placeholder="Name" type="text" />
+
+  <input class="email" #newEmail (keyup.enter)="sendUserData(newName.value, newEmail.value, newPass.value)" placeholder="E-mail" type="email" />
+
+  <input class="password" #newPass (keyup.enter)="sendUserData(newName.value, newEmail.value, newPass.value)" placeholder="Password" type="password" />
+
+  <input class="password" #rePass (keyup)="checkPass(newPass.value, rePass.value)" placeholder="Re-type password" type="password" />
+
+  <button type="submit" class="btn btn-primary" (click)="sendUserData(newName.value, newEmail.value, newPass.value)">Sign up</button>
+  <!-- <button [routerLink]="['/']">Sign up</button> -->
+  <!-- <button type="submit" class="btn btn-primary" (click)="hideAlert = !hideAlert;">Sign up</button> -->
+</section>
+
+<section #signupAlert [ngClass]="{'hide': hideAlert}">
+  <div [ngClass]="{'alert-danger': dangerAlert, 'alert-success': successAlert}" class="alert">
+    <div class="alert-item">
+      <span class="alert-text">
+        {{message}}
+      </span>
+    </div>
+  </div>
 </section>

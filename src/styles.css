@@ -1,8 +1,53 @@
+@font-face {
+  font-family: 'Metropolis';
+  src: url('assets/fonts/metropolis/Metropolis-Light.otf') format('opentype'),
+       url('assets/fonts/metropolis/EOT/Metropolis-Light.eot'),
+       url('assets/fonts/metropolis/WOFF/Metropolis-Light.woff') format('woff'),
+       url('assets/fonts/metropolis/WOFF2/Metropolis-Light.woff2') format('woff2');
+  src: url('assets/fonts/metropolis/Metropolis-LightItalic.otf') format('opentype'),
+       url('assets/fonts/metropolis/EOT/Metropolis-LightItalic.eot'),
+       url('assets/fonts/metropolis/WOFF/Metropolis-LightItalic.woff') format('woff'),
+       url('assets/fonts/metropolis/WOFF2/Metropolis-LightItalic.woff2') format('woff2');
+  src: url('assets/fonts/metropolis/Metropolis-Medium.otf') format('opentype'),
+       url('assets/fonts/metropolis/EOT/Metropolis-Medium.eot'),
+       url('assets/fonts/metropolis/WOFF/Metropolis-Medium.woff') format('woff'),
+       url('assets/fonts/metropolis/WOFF2/Metropolis-Medium.woff2') format('woff2');
+  src: url('assets/fonts/metropolis/Metropolis-MediumItalic.otf') format('opentype'),
+       url('assets/fonts/metropolis/EOT/Metropolis-MediumItalic.eot'),
+       url('assets/fonts/metropolis/WOFF/Metropolis-MediumItalic.woff') format('woff'),
+       url('assets/fonts/metropolis/WOFF2/Metropolis-MediumItalic.woff2') format('woff2');
+  src: url('assets/fonts/metropolis/Metropolis-Regular.otf') format('opentype'),
+       url('assets/fonts/metropolis/EOT/Metropolis-Regular.eot'),
+       url('assets/fonts/metropolis/WOFF/Metropolis-Regular.woff') format('woff'),
+       url('assets/fonts/metropolis/WOFF2/Metropolis-Regular.woff2') format('woff2');
+  src: url('assets/fonts/metropolis/Metropolis-RegularItalic.otf') format('opentype'),
+       url('assets/fonts/metropolis/EOT/Metropolis-RegularItalic.eot'),
+       url('assets/fonts/metropolis/WOFF/Metropolis-RegularItalic.woff') format('woff'),
+       url('assets/fonts/metropolis/WOFF2/Metropolis-RegularItalic.woff2') format('woff2');
+  src: url('assets/fonts/metropolis/Metropolis-SemiBold.otf') format('opentype'),
+       url('assets/fonts/metropolis/EOT/Metropolis-SemiBold.eot'),
+       url('assets/fonts/metropolis/WOFF/Metropolis-SemiBold.woff') format('woff'),
+       url('assets/fonts/metropolis/WOFF2/Metropolis-SemiBold.woff2') format('woff2');
+  src: url('assets/fonts/metropolis/Metropolis-SemiBoldItalic.otf') format('opentype'),
+       url('assets/fonts/metropolis/EOT/Metropolis-SemiBoldItalic.eot'),
+       url('assets/fonts/metropolis/WOFF/Metropolis-SemiBoldItalic.woff') format('woff'),
+       url('assets/fonts/metropolis/WOFF2/Metropolis-SemiBoldItalic.woff2') format('woff2');
+}
+
+html {
+  height: 100%;
+}
+
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-size: 11px;
-  font-family: Helvetica, Arial, sans-serif;
-  background: teal;
+  background-color: #313131;
+  color: white;
+  font-family: 'Metropolis', sans-serif;
+}
+
+.spinner {
+  left: 50%;
+  top: 250px;
 }

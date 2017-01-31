@@ -1,0 +1,60 @@
+<section>
+  <h1>Exams</h1>
+  <h2></h2>
+
+  <clr-datagrid>
+      <clr-dg-column [clrDgField]="'name'">Student name</clr-dg-column>
+      <clr-dg-column [clrDgField]="'mentor'">Mentor</clr-dg-column>
+      <clr-dg-column [clrDgField]="'cohort'">Cohort</clr-dg-column>
+      <clr-dg-column [clrDgField]="'class'">Class</clr-dg-column>
+      <clr-dg-column>Action</clr-dg-column>
+
+      <clr-dg-row *clrDgItems="let exam of exams">
+          <clr-dg-cell>{{exam.name}}</clr-dg-cell>
+          <clr-dg-cell>{{exam.mentor}}</clr-dg-cell>
+          <clr-dg-cell>{{exam.cohort}}</clr-dg-cell>
+          <clr-dg-cell>{{exam.class}}</clr-dg-cell>
+          <clr-dg-cell class="centered">
+            <button class="btn btn-sm btn-link">Edit</button>
+            <button class="btn btn-sm btn-link">Delete</button>
+          </clr-dg-cell>
+      </clr-dg-row>
+
+      <clr-dg-footer>{{exams.length}} exams</clr-dg-footer>
+  </clr-datagrid>
+  <button class="btn btn-primary add" (click)="opened = true">Create new exam</button>
+      <clr-modal [(clrModalOpen)]="opened" [clrModalStaticBackdrop]="true">
+      <div class="modal-body">
+        <label>Cohorts</label>
+        <div class="select">
+          <select id="exampleSelect1">
+            <option *ngFor="let cohort of cohorts">{{cohort.name}}</option>
+          </select>
+        </div>
+        <label>Classes</label>
+        <div class="select">
+          <select id="exampleSelect1">
+            <option *ngFor="let exam of exams">{{exam.class}}</option>
+          </select>
+        </div>
+        <div class= "form-group">
+            <label for="class-name">Class name</label>
+            <input type="text" id="class-name" size="25"><br />
+            <label for="description">Description</label>
+            <textarea id="description" rows="4"></textarea>
+            <label for="github-url">Github URL</label>
+            <input type="url" id="github-url" size="25"><br />
+            <label for=duration>Duration</label>
+            <div class="select">
+              <select id="duration">
+                <option></option>
+              </select>
+            </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+          <button type="button" class="btn btn-outline" (click)="opened = false">Cancel</button>
+          <button type="button" class="btn btn-primary" (click)="opened = false">Create exam</button>
+      </div>
+  </clr-modal>
+</section>

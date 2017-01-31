@@ -1,0 +1,166 @@
+section {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: flex-start;
+  width: auto;
+  background-color: #CCCCCC;
+}
+
+article {
+  margin: 1em;
+  padding: 2em;
+  width: 500px;
+  color: teal;
+  border: 1px solid white;
+  /*background-color: rgba(255, 255, 255, .7);*/
+  position: relative;
+  transition: .3s ease;
+  -webkit-transition: .3s ease;
+  -moz-transition: .3s ease;
+}
+/*
+article:hover {
+  background-color: rgba(255, 255, 255, .7);
+  transition: .3s ease;
+  -webkit-transition: .3s ease;
+  -moz-transition: .3s ease;
+}*/
+
+h1 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 0 10px 10px;
+  padding: 0;
+}
+
+h2 {
+  font-size: 1em;
+  font-weight: normal;
+  margin: 10px 10px 20px 20px;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+/*hr {
+  width: 450px;
+  height: 1px;
+  align-self: center;
+  border: 0;
+  background-color: teal;
+}
+*/
+.description {
+  margin: 20px 20px 0 20px;
+}
+
+.repo {
+  box-sizing: border-box;
+  margin: 10px 20px 10px 20px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, .5);
+  border: 1px dotted teal;
+  color: teal;
+  line-height: 14px;
+  border-radius: 3px;
+}
+
+.repo-label, .repo-url {
+  margin: 0;
+}
+
+.repo-url {
+  margin-top: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+button {
+  position: absolute;
+  right: 3em;
+  bottom: 1.5em;
+  margin: 10px 0 10px 0;
+  border: 0;
+  color: teal;
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 5px;
+  width: 5em;
+  background-color: rgba(255, 255, 255, .5);
+  transition: .3s ease;
+  -webkit-transition: .3s ease;
+  -moz-transition: .3s ease;
+}
+
+button:hover {
+  color: white;
+  background-color: orange;
+  cursor: pointer;
+  transition: .3s ease;
+  -webkit-transition: .3s ease;
+  -moz-transition: .3s ease;
+}
+
+nav {
+  width: 250px;
+  height: calc(100vh - 50px);
+  background-color: #313131;
+  overflow: hidden;
+}
+
+/*this will go to its own component*/
+
+h2 {
+  font-size: 12px;
+  color: teal;
+  font-weight: normal;
+  margin: 20px 0 20px 30px;
+}
+
+
+hr {
+  width: 90%;
+  height: 1px;
+  border: 0;
+  background-color: teal;
+}
+
+ul {
+  width: auto;
+}
+
+li {
+  list-style-type: none;
+  margin-left: -10px;
+  width: auto;
+  padding: 5px;
+  font-size: 11px;
+  color: teal;
+  opacity: .7;
+  transition: .3s ease;
+  -webkit-transition: .3s ease;
+  -moz-transition: .3s ease;
+}
+
+li:hover {
+  opacity: 1;
+  /*background-image: linear-gradient(to right, white 0%, teal 50%, white 100%);*/
+  cursor: pointer;
+  /*background-color: teal;*/
+  /*color: white;*/
+  text-decoration: underline;
+  transition: .3s ease;
+  -webkit-transition: .3s ease;
+  -moz-transition: .3s ease;
+}
+
+.selected {
+  /*background-color: teal;*/
+  /*color: white;*/
+  text-decoration: underline;
+  opacity: 1;
+}
+
+article {
+  width: 100%;
+}

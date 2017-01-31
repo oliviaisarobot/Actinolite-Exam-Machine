@@ -1,0 +1,20 @@
+<h1>Students</h1>
+<h2>Search, filter, change the class of students.</h2>
+
+<clr-datagrid>
+    <clr-dg-column [clrDgField]="'name'">Student name</clr-dg-column>
+    <clr-dg-column [clrDgField]="'cohort'">Cohort</clr-dg-column>
+    <clr-dg-column [clrDgField]="'class'">Class</clr-dg-column>
+    <clr-dg-column>Actions</clr-dg-column>
+
+    <clr-dg-row *clrDgItems="let user of users">
+        <clr-dg-cell>{{user.name}}</clr-dg-cell>
+        <clr-dg-cell>{{user.cohort}}</clr-dg-cell>
+        <clr-dg-cell>{{user.class}}</clr-dg-cell>
+        <clr-dg-cell class="centered">
+          <button class="btn btn-sm btn-link" (click)="changeClass()">Edit</button>
+        </clr-dg-cell>
+    </clr-dg-row>
+
+    <clr-dg-footer>{{users.length}} students</clr-dg-footer>
+</clr-datagrid>
