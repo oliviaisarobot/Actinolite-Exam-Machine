@@ -1,0 +1,25 @@
+<section class="login">
+  <h1>Sign up for Exam<strong>Machine</strong></h1>
+  <hr />
+  <p>
+    <label for="user">Pick a username</label>
+    <sup>?</sup>
+  </p>
+  <input class="username" type="text" name="user" />
+  <p>
+    <label for="pass">Pick a password</label>
+    <sup>?</sup>
+  </p>
+  <input type="password" name="pass" />
+  <p>
+    <label for="pass-again">Retype password</label>
+    <sup>?</sup>
+  </p>
+  <input type="password" name="pass-again" />
+  <p>
+    <label for="hint">Hint:</label>
+    <sup>?</sup>
+  </p>
+  <textarea name="hint"></textarea>
+  <button [routerLink]="['../']">Sign up</button>
+</section>
