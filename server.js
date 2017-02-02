@@ -4,10 +4,12 @@ var express = require('express'),
     bodyParser = require('body-parser'),
     app = express();
 var dbhandler = require("./dbhandler.js");
-app.set('views', __dirname + '/views') ;
-app.get('/' , function(req,res) {
-    res.sendfile('views/index.html');
-} );
+
+app.use(express.static(__dirname + '/dist'));
+
+app.get('/*', function(req, res) {
+  res.sendFile(path.join(__dirname + '/dist/index.html'));
+});
 
 app.use(forceSSL());
 
