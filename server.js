@@ -1,8 +1,5 @@
-var express = require('express'),
-    http = require('http'),
-    request = require('request'),
-    bodyParser = require('body-parser'),
-    app = express();
+var express = require('express');
+var app = express();
 var dbhandler = require("./dbhandler.js");
 
 app.use(express.static(__dirname + '/dist'));
@@ -30,17 +27,4 @@ app.use(function(req, res, next) {
   next();
 });
 
-app.post('/user/login', function(req,res){
-    dbhandler.getUser(req,res);
-});
-
-app.get('/db/addRecord', function(req,res){
-    dbhandler.addUser(req,res);
-
-app.set('port', process.env.PORT || 3001);
-
-app.use(express.static(__dirname + '/dist/index.html'));
-
-app.listen(app.get('port'), function () {
-    console.log('Express server listening on port ' + app.get('port'));
-});
+app.set('port', process.env.PORT || 8080);
